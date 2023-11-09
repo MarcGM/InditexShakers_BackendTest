@@ -21,8 +21,8 @@ public class PriceModel {
 	private Long id;
 	
 	
-	@Column(columnDefinition = "INT")
-	private Integer brandId;
+	@Column(columnDefinition = "VARCHAR")
+	private String brandId;
 	
 	
 	@Column(columnDefinition = "VARCHAR")
@@ -33,12 +33,12 @@ public class PriceModel {
 	private String endDate;
 	
 	
-	@Column(columnDefinition = "INT")
-	private Integer priceList;
+	@Column(columnDefinition = "VARCHAR")
+	private String priceList;
 	
 	
-	@Column(columnDefinition = "INT")
-	private Integer productId;
+	@Column(columnDefinition = "VARCHAR")
+	private String productId;
 	
 	
 	@Column(columnDefinition = "INT")
@@ -59,10 +59,10 @@ public class PriceModel {
 		return id;
 	}
 	
-	public Integer getBrandId() {
+	public String getBrandId() {
 		return brandId;
 	}
-	public void setBrandId(Integer brandId) {
+	public void setBrandId(String brandId) {
 		this.brandId = brandId;
 	}
 	public String getStartDate() {
@@ -77,16 +77,16 @@ public class PriceModel {
 	public void setEndDate(String endDate) {
 		this.endDate = endDate;
 	}
-	public Integer getPriceList() {
+	public String getPriceList() {
 		return priceList;
 	}
-	public void setPriceList(Integer priceList) {
+	public void setPriceList(String priceList) {
 		this.priceList = priceList;
 	}
-	public Integer getProductId() {
+	public String getProductId() {
 		return productId;
 	}
-	public void setProductId(Integer productId) {
+	public void setProductId(String productId) {
 		this.productId = productId;
 	}
 	public Integer getPriority() {

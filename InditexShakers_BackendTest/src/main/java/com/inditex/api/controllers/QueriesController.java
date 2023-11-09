@@ -20,8 +20,8 @@ public class QueriesController {
 	}
 
 	@PostMapping({"/getPrice"})
-	public List<Optional<PriceModel>> getPrice(@RequestParam("applyDate") String applyDate, @RequestParam("productId") Integer productId,
-			@RequestParam("brandId") Integer brandId) {
+	public List<Optional<PriceModel>> getPrice(@RequestParam("applyDate") String applyDate, @RequestParam("productId") String productId,
+			@RequestParam("brandId") String brandId) {
 		return queriesService.getPrice(applyDate, productId, brandId);
 	}
 }

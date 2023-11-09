@@ -16,6 +16,6 @@ public interface QueriesRepository extends CrudRepository<PriceModel, Long>{
 
 	@Transactional
 	@Query(value = "SELECT ID, PRODUCT_ID, BRAND_ID, PRICE_LIST, START_DATE, END_DATE, PRICE, CURR, PRIORITY FROM ELECTRONIC_COMERCIAL WHERE PRODUCT_ID = :productId AND BRAND_ID = :brandId AND :applyDateDateTime BETWEEN START_DATE AND END_DATE", nativeQuery = true)
-	public List<Optional<PriceModel>> getData(@RequestParam LocalDateTime applyDateDateTime, @RequestParam  Integer productId, @RequestParam  Integer brandId);
+	public List<Optional<PriceModel>> getData(@RequestParam LocalDateTime applyDateDateTime, @RequestParam  String productId, @RequestParam  String brandId);
 
 }

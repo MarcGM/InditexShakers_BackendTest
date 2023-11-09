@@ -18,7 +18,7 @@ public class QueriesService {
 	@Autowired
 	private QueriesRepository queryRepository;
 
-	public List<Optional<PriceModel>> getPrice(String applyDate, Integer productId, Integer brandId){
+	public List<Optional<PriceModel>> getPrice(String applyDate, String productId, String brandId){
 		List<Optional<PriceModel>> priceModel = new ArrayList<>();
 		DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 		
